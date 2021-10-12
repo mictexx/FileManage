@@ -66,6 +66,17 @@ public class ProgramFinalTestSection {
 		}
 
 		sc.close();
+		
+		Double VlTotal = 0.00;
+		
+		for (Product item : list) {
+			System.out.println("Produto: "+ item.getProduct() +"   \t\tTotal: "+ item.total());
+			VlTotal += item.total();
+
+		}
+		System.out.println();
+		System.out.println("Total vendas: " + String.format("%.2f", VlTotal));
+		
 	}
 }
 
