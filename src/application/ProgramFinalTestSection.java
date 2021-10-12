@@ -48,7 +48,7 @@ public class ProgramFinalTestSection {
 				itemCsv = br.readLine();
 			}
 
-			try (BufferedWriter bw = new BufferedWriter(new FileWriter(targetFileStr))) {
+			try (BufferedWriter bw = new BufferedWriter(new FileWriter(targetFileStr,true))) {
 
 				for (Product item : list) {
 					bw.write(item.getProduct() + "," + String.format("%.2f", item.total()));
